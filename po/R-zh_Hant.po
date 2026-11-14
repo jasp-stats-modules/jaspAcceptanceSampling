@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: jaspAcceptanceSampling 0.95.5\n"
-"POT-Creation-Date: 2026-04-04 05:10\n"
+"POT-Creation-Date: 2026-11-14 04:40\n"
 "PO-Revision-Date: 2026-07-28 05:01+0000\n"
 "Last-Translator: 陳正昌 <chencc99@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
@@ -46,9 +46,6 @@ msgstr "分析變數方案"
 msgid "Variable Sampling Plan (Standard deviation assumed to be <b>%s</b>)"
 msgstr "變數抽樣方案（假設標準差為 <b>%s</b>）"
 
-msgid "Sample size"
-msgstr "樣本數"
-
 msgid "Critical Distance (k)"
 msgstr "臨界距離（k）"
 
@@ -60,11 +57,157 @@ msgid ""
 "the generated variable plan."
 msgstr "批量（N = %1$.0f）不能小於所產生的變數方案之樣本數（n = %2$.0f）。"
 
+msgid ""
+"Computational diagnostics are unavailable for this cached fit. Refit the "
+"analysis before relying on its decisions."
+msgstr ""
+
+msgid ""
+"Computational diagnostics could not be calculated. The posterior draws are "
+"retained, but computational reliability has not been assessed. Refit the "
+"analysis and inspect the sampler output."
+msgstr ""
+
+msgid ""
+"Only %1$d of %2$d requested chains are available. Inspect the sampler output "
+"for failed chains and refit before relying on the results."
+msgstr ""
+
+msgid ""
+"Thinning is enabled. Divergence and treedepth counts cover only retained "
+"transitions, so other events may be missed; E-BFMI is unavailable. Rerun "
+"with Thinning = 1 for complete sampler checks."
+msgstr ""
+
+msgid ""
+"Sampler diagnostics are unavailable for one or more chains. Missing checks "
+"are not evidence of successful sampling; refit and inspect the sampler "
+"output."
+msgstr ""
+
+msgid ""
+"Detected %1$d divergent transitions in the available retained post-warmup "
+"records. Estimates may be biased. Review the model, priors and sampler "
+"settings before relying on the results; increasing Adapt delta may help. No "
+"divergent draws were removed."
+msgstr ""
+
+msgid ""
+"The maximum treedepth was reached in %1$d retained post-warmup iterations. "
+"This can reduce sampling efficiency. Inspect mixing and the model before "
+"considering a higher treedepth limit."
+msgstr ""
+
+msgid ""
+"Only one chain was run, so between-chain mixing cannot be assessed and "
+"automatic R-hat is unavailable. Run multiple chains, preferably at least "
+"four."
+msgstr ""
+
+msgid ""
+"Fewer than six post-warmup draws per chain are available. R-hat, effective "
+"sample sizes and E-BFMI cannot be assessed reliably. Increase the number of "
+"retained samples."
+msgstr ""
+
+msgid ""
+"At least one chain is constant for %1$d sampled parameter(s), including "
+"%2$s. Mixing and effective sample sizes are unavailable for these "
+"parameters. Inspect the chains and refit before relying on the results."
+msgstr ""
+
+msgid ""
+"Non-finite draws occur in sampled parameters. Their mixing and effective "
+"sample sizes are unavailable; investigate the model and sampler output "
+"before using the results."
+msgstr ""
+
+msgid ""
+"The maximum rank-normalized split R-hat is %1$.3f (%2$s), at or above 1.01. "
+"The chains may not have mixed. Inspect their traces, run longer chains, and "
+"review the model if the problem persists."
+msgstr ""
+
+msgid ""
+"R-hat is unavailable for one or more sampled parameters. Inspect the chains "
+"and refit; this is not a successful mixing check."
+msgstr ""
+
+msgid ""
+"Bulk or tail effective sample size is below %1$d (100 times the number of "
+"chains) for one or more sampled parameters. Monte Carlo estimates may be "
+"imprecise. If the chains mix well, increase the number of retained samples; "
+"otherwise investigate mixing first."
+msgstr ""
+
+msgid ""
+"Bulk or tail effective sample size is unavailable for one or more sampled "
+"parameters. Inspect the chains and obtain more usable draws before relying "
+"on the results."
+msgstr ""
+
+msgid ""
+"E-BFMI is below 0.3 in chain(s) %1$s, indicating poor exploration of the "
+"energy distribution. Review the model and priors and consider longer warmup "
+"before relying on the results."
+msgstr ""
+
+msgid ""
+"E-BFMI is unavailable for one or more chains because their energy "
+"diagnostics are missing, non-finite or constant. Refit with usable energy "
+"diagnostics; missing values are not a successful check."
+msgstr ""
+
+msgid "Sampling requires attention."
+msgstr ""
+
+msgid ""
+"No diagnostic thresholds were exceeded. These checks do not prove "
+"convergence."
+msgstr ""
+
+msgid "Unavailable"
+msgstr ""
+
+msgid ""
+"Retained post-warmup draws: %1$d per chain across %2$d chain(s). All "
+"retained draws are used, including those associated with divergences."
+msgstr ""
+
+msgid "Divergences: %1$s; maximum treedepth hits: %2$s (limit %3$d)."
+msgstr ""
+
+msgid ""
+"Across all sampled parameters: maximum rank-normalized split R-hat = %1$s; "
+"minimum bulk ESS = %2$s; minimum tail ESS = %3$s."
+msgstr ""
+
+msgid "chain %1$d: %2$s"
+msgstr ""
+
+msgid "E-BFMI (%1$s)."
+msgstr ""
+
+#, fuzzy
+msgid "Computational Diagnostics"
+msgstr "MCMC 診斷"
+
+#, fuzzy
+msgid "Sampling Warnings"
+msgstr "單次抽樣計畫"
+
+msgid "Analysis Error"
+msgstr ""
+
 msgid "The dataset is empty."
 msgstr "資料集為空。"
 
 msgid "The following assigned variables are missing from the dataset: %1$s."
 msgstr "下列指定的變數在資料集中不存在：%1$s。"
+
+#, fuzzy
+msgid "%1$s must contain numeric values."
+msgstr "%1$s 不能包含負值。"
 
 msgid "%1$s cannot contain missing or non-finite values."
 msgstr "%1$s 不能包含遺漏值或非有限值。"
@@ -75,20 +218,56 @@ msgstr "%1$s 只能包含整數。"
 msgid "%1$s cannot contain negative values."
 msgstr "%1$s 不能包含負值。"
 
+msgid "%1$s must be smaller than %2$d for this analysis."
+msgstr ""
+
 msgid "Defect Count"
 msgstr "缺陷數"
 
 msgid "Lot Size"
 msgstr "批量"
 
-msgid "Time"
-msgstr "時間"
+#, fuzzy
+msgid "Lot Number"
+msgstr "批號"
 
-msgid "Predictor"
-msgstr "預測變數"
+msgid ""
+"Each lot number must occur only once. When inspecting more items from an "
+"existing lot, update that lot's sample size and defect count instead of "
+"adding another row."
+msgstr ""
 
-msgid "Predictor must vary across lots when using the predictor model."
+msgid "Assign each covariate only once."
+msgstr ""
+
+#, fuzzy
+msgid ""
+"At least two lots with varying predictor values are required when using the "
+"predictor model."
 msgstr "使用預測變數模型時，預測變數在各批之間必須有所變化。"
+
+msgid "Covariate %s"
+msgstr ""
+
+msgid "Covariate %s must vary across lots."
+msgstr ""
+
+msgid ""
+"Covariate %s cannot be standardized numerically. Rescale its values and try "
+"again."
+msgstr ""
+
+msgid ""
+"The covariates cannot be standardized numerically. Rescale their values and "
+"try again."
+msgstr ""
+
+msgid ""
+"The covariates are linearly dependent (for example, one is a rescaled or "
+"shifted copy of another), or there are too few lots to distinguish their "
+"effects. Remove redundant covariates or add lots with distinct covariate "
+"values."
+msgstr ""
 
 msgid "Observed defects cannot exceed the sample size for any lot."
 msgstr "任何批的觀察到缺陷數不能超過其樣本數。"
@@ -96,8 +275,21 @@ msgstr "任何批的觀察到缺陷數不能超過其樣本數。"
 msgid "Sample size cannot exceed the lot size for any lot."
 msgstr "任何批的樣本數不能超過其批量。"
 
+msgid "Model Update"
+msgstr ""
+
+msgid ""
+"The saved fit uses a different model version. Recalculation uses the current "
+"mixture model, so results may differ from those previously saved."
+msgstr ""
+
 msgid "Sampling..."
 msgstr "抽樣中..."
+
+msgid ""
+"Sampling produced no posterior predictive draws. Check the sampler output "
+"and MCMC settings, then refit. An acceptance decision cannot be calculated."
+msgstr ""
 
 msgid "Estimation failed: %s"
 msgstr "估計失敗：%s"
@@ -130,11 +322,61 @@ msgstr "最後一批的批號、批量或缺陷數遺漏（NA）。"
 msgid "Consider to Continue"
 msgstr "考慮繼續"
 
+msgid ""
+"Further sampling is suggested because neither decision criterion is met at "
+"the selected thresholds: %1$s%% for acceptance and %2$s%% for rejection."
+msgstr ""
+
 msgid "Consider to Accept"
 msgstr "考慮允收"
 
+msgid ""
+"Acceptance is suggested because the posterior predictive probability that "
+"the lot's defect proportion exceeds the RQL is below the acceptance "
+"threshold of %s%%."
+msgstr ""
+
 msgid "Consider to Reject"
 msgstr "考慮拒收"
+
+msgid ""
+"Rejection is suggested because the posterior predictive probability of "
+"exceeding the RQL is greater than %1$s%%, while the probability of falling "
+"below the AQL is less than %2$s%%."
+msgstr ""
+
+#, fuzzy
+msgid "Predictor Coefficients"
+msgstr "預測變數係數 β"
+
+msgid "Predictor"
+msgstr "預測變數"
+
+msgid "Mean"
+msgstr "平均數"
+
+msgid "Median"
+msgstr ""
+
+msgid "Lower"
+msgstr ""
+
+msgid "95%% Credible Interval"
+msgstr ""
+
+msgid "Upper"
+msgstr ""
+
+msgid ""
+"Coefficients describe the change in log-odds of a defect per one SD increase "
+"in the covariate, holding the latent baseline and other covariates fixed. "
+"Intervals are equal-tailed."
+msgstr ""
+
+msgid ""
+"Finite posterior draws for every predictor are required to summarize the "
+"coefficients. Inspect the sampling diagnostics."
+msgstr ""
 
 msgid "Defect Rate Over Time"
 msgstr "隨時間變化的缺陷率"
@@ -154,32 +396,75 @@ msgstr "當前批中的缺陷"
 msgid "Posterior Predictive Probability"
 msgstr "後驗預測機率"
 
-msgid ""
-"Note. Tail correction adds a uniform sudden-jump component over the full lot-"
-"size range (0 to N), so this figure is zoomed to the uncorrected predictive "
-"range to keep the posterior shape readable."
-msgstr "註。尾部校正在整個批量範圍（0 到 N）上加上了均勻的突跳成分，因此此圖放大到未校正的預測範圍，以保持後驗形狀可讀。"
-
 msgid "Posterior Defect Rate"
 msgstr "後驗缺陷率"
+
+msgid ""
+"Finite posterior draws are required to plot the defect-rate density. Inspect "
+"the sampling diagnostics."
+msgstr ""
+
+msgid ""
+"The posterior defect-rate draws have no variation, so a density cannot be "
+"estimated. Inspect the sampling diagnostics."
+msgstr ""
 
 msgid "Density"
 msgstr "密度"
 
-msgid "Beta Coefficient"
-msgstr "Beta 係數"
+msgid ""
+"Finite posterior draws for every predictor are required to plot the "
+"coefficients. Inspect the sampling diagnostics."
+msgstr ""
 
-msgid "Predictor Coefficient β"
-msgstr "預測變數係數 β"
+msgid ""
+"The posterior draws for one or more predictor coefficients have no "
+"variation, so their densities cannot be estimated. Inspect the sampling "
+"diagnostics."
+msgstr ""
+
+msgid "Coefficient β (per SD)"
+msgstr ""
+
+msgid ""
+"Invalid lot counts for the predictive distribution. Check the lot size, "
+"inspected count and observed defects. An acceptance decision cannot be "
+"calculated."
+msgstr ""
+
+msgid ""
+"No posterior predictive draws are available. Check the sampler output and "
+"MCMC settings, then refit. An acceptance decision cannot be calculated."
+msgstr ""
+
+msgid ""
+"Posterior predictive draws contain non-numeric, missing or non-finite "
+"values. Inspect the sampler output and refit. An acceptance decision cannot "
+"be calculated."
+msgstr ""
+
+msgid ""
+"Posterior predictive defect counts must be whole numbers. Inspect the model "
+"output and refit. An acceptance decision cannot be calculated."
+msgstr ""
+
+msgid ""
+"Posterior predictive defect counts fall outside the possible total given the "
+"inspected items. Inspect the model output and refit. An acceptance decision "
+"cannot be calculated."
+msgstr ""
+
+msgid ""
+"The posterior predictive probabilities are invalid or do not sum to one. "
+"Inspect the model output and refit. An acceptance decision cannot be "
+"calculated."
+msgstr ""
 
 msgid "MCMC Diagnostics"
 msgstr "MCMC 診斷"
 
 msgid "Parameter"
 msgstr "參數"
-
-msgid "Mean"
-msgstr "平均數"
 
 msgid "SD"
 msgstr "標準差"
@@ -190,22 +475,96 @@ msgstr "ESS"
 msgid "R-hat"
 msgstr "R-hat"
 
+msgid ""
+"ESS and R-hat are RStan's traditional raw-draw ESS and split R-hat "
+"summaries. The automatic computational checks use rank-normalized split R-"
+"hat and bulk/tail ESS for all sampled parameters. Diagnostics can be "
+"undefined for constant generated quantities, such as predicted defects after "
+"complete inspection."
+msgstr ""
+
 msgid "No parameters selected for the MCMC diagnostics table."
 msgstr "未為 MCMC 診斷表選擇任何參數。"
 
-msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
-msgstr "先驗眾數（%1$.4f）必須介於 0 與 RQL（%2$.4f）之間。"
+msgid ""
+"The Bayes factor could not be calculated reliably for these inputs. Please "
+"adjust the quality limits or prior parameters."
+msgstr ""
+
+msgid "Please select a valid shape constraint for the three-region prior."
+msgstr ""
+
+msgid "Please ensure 0 < AQL < RQL < 1."
+msgstr "請確保 0 < AQL < RQL < 1。"
+
+msgid "Target region probabilities must be positive and sum to 1."
+msgstr ""
 
 msgid ""
-"Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
-"Please choose a lower mode, a lower RQL, or a different prior."
-msgstr "無法為眾數 %1$.4f 與 RQL %2$.4f 建構無偏先驗。請選擇較低的眾數、較低的 RQL 或不同的先驗。"
+"Could not reliably calibrate a three-region Beta prior for AQL %1$s and RQL "
+"%2$s. Change the quality limits or choose a Custom prior."
+msgstr ""
+
+msgid ""
+"The calibrated three-region Beta prior is U-shaped, which the selected shape "
+"constraint excludes. Change AQL/RQL, allow a U-shaped prior, or choose a "
+"Custom prior."
+msgstr ""
+
+msgid ""
+"The calibrated three-region Beta prior does not have both shape parameters "
+"at least 1, as required by the selected shape constraint. Change AQL/RQL, "
+"choose a different shape constraint, or choose a Custom prior."
+msgstr ""
+
+msgid "Please select a valid shape for the impartial prior."
+msgstr ""
+
+msgid "The prior location and RQL must both be strictly between 0 and 1."
+msgstr ""
+
+msgid ""
+"A location and RQL of 0.5 do not determine a unique Beta prior of the "
+"selected shape. Choose a Custom prior to specify its parameters."
+msgstr ""
+
+msgid ""
+"A unimodal Beta prior cannot have mode %1$s and 50%% probability below RQL "
+"%2$s. The RQL must lie strictly between the mode and 0.5. Change the "
+"location, shape or RQL, or choose a Custom prior."
+msgstr ""
+
+msgid ""
+"A U-shaped Beta prior cannot have minimum %1$s and 50%% probability below "
+"RQL %2$s. The minimum and RQL must lie on opposite sides of 0.5. Change the "
+"location, shape or RQL, or choose a Custom prior."
+msgstr ""
+
+msgid ""
+"Could not reliably calibrate the selected prior for location %1$s and RQL "
+"%2$s. Change the location or RQL, or choose a Custom prior."
+msgstr ""
+
+#, fuzzy
+msgid "Sampling Plans"
+msgstr "單次抽樣計畫"
+
+msgid "Three-Hypothesis Bayes Factors (at d = c)"
+msgstr "三假說貝氏因子（d = c 時）"
+
+msgid "Inference"
+msgstr "推論"
+
+msgid "Prior Distribution"
+msgstr "先驗分配"
 
 msgid "Planning"
 msgstr "計畫"
 
-msgid "Please ensure 0 < AQL < RQL < 1."
-msgstr "請確保 0 < AQL < RQL < 1。"
+msgid ""
+"The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
+"or choose a different prior."
+msgstr "所選的先驗導致無效的 Beta 參數。請調整 AQL/RQL 或選擇不同的先驗。"
 
 msgid "Please provide a valid maximum sample size (> 0)."
 msgstr "請提供有效的最大樣本數（> 0）。"
@@ -214,58 +573,83 @@ msgid "Please provide a valid minimum Bayes factor (> 0)."
 msgstr "請提供有效的最小貝氏因子（> 0）。"
 
 msgid ""
-"The selected prior results in invalid Beta parameters. Please adjust AQL/RQL "
-"or choose a different prior."
-msgstr "所選的先驗導致無效的 Beta 參數。請調整 AQL/RQL 或選擇不同的先驗。"
+"No sampling plan found. With the current prior (Beta(%1$.2f, %2$.2f)) and "
+"maximum sample size (n = %3$d), the maximum attainable Bayes factor is %4$s. "
+"Consider increasing the maximum sample size, lowering the required Bayes "
+"factor, or adjusting the prior."
+msgstr ""
 
-msgid "No valid plans found satisfying the specified constraints."
-msgstr "未找到滿足指定約束條件的有效方案。"
+msgid "Strong evidence that the proportion defective is below the RQL."
+msgstr ""
 
-msgid "Inference"
-msgstr "推論"
+#, fuzzy
+msgid "Moderate evidence that the proportion defective is below the RQL."
+msgstr "拒絕該批的中度證據。"
+
+msgid ""
+"Inconclusive evidence about whether the proportion defective is below the "
+"RQL."
+msgstr ""
+
+msgid "Moderate evidence that the proportion defective is at or above the RQL."
+msgstr ""
+
+msgid "Strong evidence that the proportion defective is at or above the RQL."
+msgstr ""
+
+msgid "The selected Bayes-factor target of %1$s has been reached."
+msgstr ""
+
+msgid "The selected Bayes-factor target of %1$s has not been reached."
+msgstr ""
+
+msgid ""
+"Evidence labels and the target comparison use the unrounded Bayes factor."
+msgstr ""
+
+msgid ""
+"A target at or below 1 does not require evidence favoring a proportion "
+"defective below the RQL."
+msgstr ""
 
 msgid "Please ensure the data are valid: n >= 0 and 0 <= d <= n."
 msgstr "請確保資料有效：n >= 0 且 0 <= d <= n。"
 
+#, fuzzy
+msgid ""
+"The observed number of defectives (d) cannot exceed the sample size (n). "
+"Check the defect count and sample size."
+msgstr "任何批的觀察到缺陷數不能超過其樣本數。"
+
 msgid "Lot size (N) must be at least as large as the sample size (n)."
 msgstr "批量（N）必須至少與樣本數（n）一樣大。"
 
-msgid "Strong evidence for accepting the lot."
-msgstr "接受該批的強力證據。"
+msgid "Bayes Factor"
+msgstr "貝氏因子"
 
-msgid "Moderate evidence for accepting the lot."
-msgstr "接受該批的中度證據。"
-
-msgid "Inconclusive evidence."
-msgstr "證據不足。"
-
-msgid "Moderate evidence for rejecting the lot."
-msgstr "拒絕該批的中度證據。"
-
-msgid "Strong evidence for rejecting the lot."
-msgstr "拒絕該批的強力證據。"
-
+#, fuzzy
 msgid ""
-"The <b>Bayes factor</b> in favor of the lot defect rate being below the RQL "
-"of <b>%1$.2f</b> is <b>%2$.2f</b>. %3$s<br>Based on the observed sample, "
-"there is a <b>%4$.1f%%</b> predicted probability that the current lot of "
-"%5$d items contains at most %6$d total defects."
-msgstr "支持該批缺陷率低於 RQL <b>%1$.2f</b> 的<b>貝氏因子</b>為 <b>%2$.2f</b>。%3$s<br>根據觀察到的樣本，當前批 <b>%5$d</b> 個項目中至多有 <b>%6$d</b> 個總缺陷的<b>%4$.1f%%</b> 預測機率。"
+"The <b>Bayes factor</b> in favor of the lot proportion defective being below "
+"the RQL of <b>%1$s</b> is approximately <b>%2$s</b>. %3$s %4$s<br>Based on "
+"the observed sample, there is a <b>%5$.1f%%</b> predicted probability that "
+"the current lot of %6$d items contains at most %7$d total defectives."
+msgstr ""
+"支持該批缺陷率低於 RQL <b>%1$.2f</b> 的<b>貝氏因子</b>為 <b>%2$.2f</b>。"
+"%3$s<br>根據觀察到的樣本，當前批 <b>%5$d</b> 個項目中至多有 <b>%6$d</b> 個總"
+"缺陷的<b>%4$.1f%%</b> 預測機率。"
 
+#, fuzzy
 msgid ""
-"<u>Bayes factor</u> in favor of proportion of defects < <u>%1$.2f</u> is "
-"<b>%2$.2f</b>."
+"<u>Bayes factor</u> in favor of proportion defective < <u>%1$s</u> is "
+"approximately <b>%2$s</b>."
 msgstr "支持缺陷比例 < <u>%1$.2f</u> 的<u>貝氏因子</u>為 <b>%2$.2f</b>。"
 
 #, fuzzy
-msgid "Sampling Plans"
-msgstr "單次抽樣計畫"
-
-msgid "Acceptance number (c)"
+msgid "Acceptance Number (c)"
 msgstr "允收數（c）"
 
 #, fuzzy
-msgid "Lowest sample size (n)"
+msgid "Lowest Sample Size (n)"
 msgstr "樣本數"
 
 msgid "Prior P(θ < RQL)"
@@ -274,11 +658,13 @@ msgstr "先驗 P(θ < RQL)"
 msgid "Posterior P(θ < RQL)"
 msgstr "後驗 P(θ < RQL)"
 
-msgid "Bayes factor"
-msgstr "貝氏因子"
+msgid "Prior distribution: Beta(%1$.3f, %2$.3f)."
+msgstr ""
 
-msgid "Three-Hypothesis Bayes Factors (at d = c)"
-msgstr "三假說貝氏因子（d = c 時）"
+msgid ""
+"Bayes factors are calculated from log probabilities; displayed probabilities "
+"may round to 0 or 1."
+msgstr ""
 
 msgid "Prior P(Good)"
 msgstr "先驗 P(良好)"
@@ -310,16 +696,14 @@ msgstr "BF（中等 對 不良）"
 msgid "Posterior Distribution"
 msgstr "後驗分配"
 
-msgid "Prior Distribution"
-msgstr "先驗分配"
-
 msgid "Lot Proportion Defective"
 msgstr "批次不良比例"
 
 msgid "Posterior Predictive Distribution"
 msgstr "後驗預測分配"
 
-msgid "Total Defects in Lot"
+#, fuzzy
+msgid "Total Defectives in Lot"
 msgstr "批量中的總缺陷數"
 
 msgid "Probability"
@@ -328,20 +712,24 @@ msgstr "機率"
 msgid "Inference Decision Table"
 msgstr "推論決策表"
 
-msgid "PPD Good (≤ %1$d defects in Lot)"
+#, fuzzy
+msgid "PPD Good (≤ %1$d defectives in lot)"
 msgstr "PPD 良好（批量中 ≤ %1$d 個缺陷）"
 
-msgid "PPD Middle (> %1$d & ≤ %2$d defects)"
+#, fuzzy
+msgid "PPD Middle (> %1$d & ≤ %2$d defectives)"
 msgstr "PPD 中等（> %1$d 且 ≤ %2$d 個缺陷）"
 
-msgid "PPD Bad (> %1$d defects in Lot)"
+#, fuzzy
+msgid "PPD Bad (> %1$d defectives in lot)"
 msgstr "PPD 不良（批量中 > %1$d 個缺陷）"
 
 #, fuzzy
 msgid "Sample Size (n)"
 msgstr "樣本數"
 
-msgid "Defects (d)"
+#, fuzzy
+msgid "Defectives (d)"
 msgstr "缺陷（d）"
 
 msgid "AQL"
@@ -350,32 +738,40 @@ msgstr "AQL"
 msgid "RQL"
 msgstr "RQL"
 
-msgid "Bayes Factor"
-msgstr "貝氏因子"
+msgid "Not available"
+msgstr ""
 
+#, fuzzy
 msgid ""
-"Bayes factor interpretation: BF ≥ 10 (strong evidence for H−), 3 ≤ BF < 10 "
-"(moderate evidence for H−), 0.33 ≤ BF < 3 (inconclusive), 0.10 ≤ BF < 0.33 "
-"(moderate evidence for H+), BF < 0.10 (strong evidence for H+)."
-msgstr "貝氏因子判讀：BF ≥ 10（支持 H− 的強力證據），3 ≤ BF < 10（支持 H− 的中度證據），0.33 ≤ BF < 3（證據不足），0.10 ≤ BF < 0.33（支持 H+ 的中度證據），BF < 0.10（支持 H+ 的強力證據）。"
+"Bayes factor interpretation: H− denotes a proportion defective below the "
+"RQL; H+ denotes a proportion defective at or above the RQL. BF ≥ 10 (strong "
+"evidence for H−), 3 ≤ BF < 10 (moderate evidence for H−), 1/3 ≤ BF < 3 "
+"(inconclusive), 0.10 ≤ BF < 1/3 (moderate evidence for H+), BF < 0.10 "
+"(strong evidence for H+). Evidence labels use the unrounded Bayes factor and "
+"are separate from whether the selected planning target is reached."
+msgstr ""
+"貝氏因子判讀：BF ≥ 10（支持 H− 的強力證據），3 ≤ BF < 10（支持 H− 的中度證"
+"據），0.33 ≤ BF < 3（證據不足），0.10 ≤ BF < 0.33（支持 H+ 的中度證據），BF "
+"< 0.10（支持 H+ 的強力證據）。"
 
 msgid "Procedure"
 msgstr "程序"
 
+#, fuzzy
 msgid ""
 "<div style='line-height: 1.2;'>\n"
 "    <p style='margin: 0 0 8px 0;'>The <b>main objective</b> of this Bayesian "
 "sampling procedure is to evaluate the quality of a lot by determining if the "
-"proportion of defects is lower than the <b>Rejectable Quality Level (RQL)</"
-"b>, which is currently set at <b>%1$.2f%%</b>.</p>\n"
+"proportion defective is lower than the <b>Rejectable Quality Level (RQL)</"
+"b>, which is currently set at <b>%1$s%%</b>.</p>\n"
 "\n"
 "    <p style='margin: 0 0 4px 0;'>Two primary statistical hypotheses are "
 "formulated about the lot proportion defective (&theta;):</p>\n"
 "    <ul style='margin: 0 0 8px 20px;'>\n"
 "      <li>The (null) hypothesis of intolerable quality H<sub>+</sub>: "
-"&theta; &ge; %1$.2f%% (user-defined)</li>\n"
+"&theta; &ge; %1$s%% (user-defined)</li>\n"
 "      <li>The (alternative) hypothesis of tolerable quality H<sub>-</sub>: "
-"&theta; < %1$.2f%% (user-defined)</li>\n"
+"&theta; < %1$s%% (user-defined)</li>\n"
 "    </ul>\n"
 "\n"
 "    <p style='margin: 0 0 8px 0;'>Additionally, users have the option to "
@@ -384,7 +780,7 @@ msgid ""
 "regions.</p>\n"
 "\n"
 "    <p style='margin: 0 0 8px 0;'>The <b>Acceptable Quality Level (AQL)</b> "
-"is currently set at <b>%2$.2f%%</b>. This value represents the\n"
+"is currently set at <b>%2$s%%</b>. This value represents the\n"
 "    quality level aimed for acceptance with high probability. These quality "
 "constraints can be adjusted in the Planning phase to reflect specific "
 "requirements.</p>\n"
@@ -397,28 +793,40 @@ msgid ""
 "    <p style='margin: 0;'><b>2. Inference:</b> Evaluate observed data to "
 "update the prior belief into\n"
 "    a posterior distribution. In this section, <b>n</b> denotes the sample "
-"size, <b>d</b> the observed number of defects in the sample, and <b>N</b> "
+"size, <b>d</b> the observed number of defectives in the sample, and <b>N</b> "
 "the lot size.</p></div>"
 msgstr ""
 "<div style='line-height: 1.2;'>\n"
-"    <p style='margin: 0 0 8px 0;'>此貝氏抽樣程序的<b>主要目標</b>是藉由判斷缺陷比例是否低於<b>拒收品質水準（RQL）</b>來評估一批的品質，目前設定為 <b>%1$.2f%%</b>。</p>\n"
+"    <p style='margin: 0 0 8px 0;'>此貝氏抽樣程序的<b>主要目標</b>是藉由判斷缺"
+"陷比例是否低於<b>拒收品質水準（RQL）</b>來評估一批的品質，目前設定為 "
+"<b>%1$.2f%%</b>。</p>\n"
 "\n"
-"    <p style='margin: 0 0 4px 0;'>關於批次不良比例（&theta;）提出了兩個主要的統計假說：</p>\n"
+"    <p style='margin: 0 0 4px 0;'>關於批次不良比例（&theta;）提出了兩個主要的"
+"統計假說：</p>\n"
 "    <ul style='margin: 0 0 8px 20px;'>\n"
-"      <li>不可容忍品質的（虛無）假說 H<sub>+</sub>：&theta; &ge; %1$.2f%%（使用者定義）</li>\n"
-"      <li>可容忍品質的（對立）假說 H<sub>-</sub>：&theta; < %1$.2f%%（使用者定義）</li>\n"
+"      <li>不可容忍品質的（虛無）假說 H<sub>+</sub>：&theta; &ge; %1$.2f%%（使"
+"用者定義）</li>\n"
+"      <li>可容忍品質的（對立）假說 H<sub>-</sub>：&theta; < %1$.2f%%（使用者"
+"定義）</li>\n"
 "    </ul>\n"
 "\n"
-"    <p style='margin: 0 0 8px 0;'>此外，使用者可以選擇進行<b>三假說檢定</b>，將品質水準劃分為『良好』（&le; AQL）、『中等』（AQL < &theta; &le; RQL）與『不良』（> RQL）三個區域。</p>\n"
+"    <p style='margin: 0 0 8px 0;'>此外，使用者可以選擇進行<b>三假說檢定</b>，"
+"將品質水準劃分為『良好』（&le; AQL）、『中等』（AQL < &theta; &le; RQL）與"
+"『不良』（> RQL）三個區域。</p>\n"
 "\n"
-"    <p style='margin: 0 0 8px 0;'>目前<b>允收品質水準（AQL）</b>設定為 <b>%2$.2f%%</b>。此數值代表\n"
-"    以高機率允收為目標的品質水準。這些品質限制可在計畫階段調整以符合特定需求。</p>\n"
+"    <p style='margin: 0 0 8px 0;'>目前<b>允收品質水準（AQL）</b>設定為 "
+"<b>%2$.2f%%</b>。此數值代表\n"
+"    以高機率允收為目標的品質水準。這些品質限制可在計畫階段調整以符合特定需"
+"求。</p>\n"
 "\n"
 "    <p style='margin: 0 0 6px 0;'><b>階段</b></p>\n"
-"    <p style='margin: 0 0 6px 0;'><b>1. 計畫：</b>決定最小樣本數，使樣本能提供足夠的證據（目標貝氏因子）以達成指定的抽樣目標。</p>\n"
+"    <p style='margin: 0 0 6px 0;'><b>1. 計畫：</b>決定最小樣本數，使樣本能提"
+"供足夠的證據（目標貝氏因子）以達成指定的抽樣目標。</p>\n"
 "\n"
-"    <p style='margin: 0;'><b>2. 推論：</b>評估觀察到的資料，將先驗信念更新為\n"
-"    後驗分配。在本節中，<b>n</b> 代表樣本數，<b>d</b> 代表樣本中觀察到的缺陷數，<b>N</b> 代表批量。</p></div>"
+"    <p style='margin: 0;'><b>2. 推論：</b>評估觀察到的資料，將先驗信念更新"
+"為\n"
+"    後驗分配。在本節中，<b>n</b> 代表樣本數，<b>d</b> 代表樣本中觀察到的缺陷"
+"數，<b>N</b> 代表批量。</p></div>"
 
 msgid ""
 "Lower limit for proportion non-conforming items needs to be smaller than the "
@@ -440,7 +848,10 @@ msgid ""
 "integer values.\n"
 "\n"
 "Check the values of N and proportion non-conforming."
-msgstr "對於超幾何分配，N * 不良品比例必須全為整數。\n\n請檢查 N 與不良品比例的值。"
+msgstr ""
+"對於超幾何分配，N * 不良品比例必須全為整數。\n"
+"\n"
+"請檢查 N 與不良品比例的值。"
 
 msgid "Sample size (n) cannot be larger than the lot size (N)."
 msgstr "樣本數（n）不能大於批量（N）。"
@@ -473,7 +884,10 @@ msgid ""
 "least 2 greater than the acceptance numbers (c).\n"
 "\n"
 "                                   Else, subsequent stages become redundant."
-msgstr "除最後一個階段外，所有階段的拒絕數（r）必須至少比允收數（c）大 2。\n\n                                   否則後續階段會變成多餘。"
+msgstr ""
+"除最後一個階段外，所有階段的拒絕數（r）必須至少比允收數（c）大 2。\n"
+"\n"
+"                                   否則後續階段會變成多餘。"
 
 msgid ""
 "Acceptance numbers (c) are cumulative, so they need to be in a non-"
@@ -493,7 +907,8 @@ msgid ""
 "Quality Level) value."
 msgstr "AQL（允收品質水準）值應低於 RQL（拒收品質水準）值。"
 
-msgid "1 - α (Producer's risk) has to be greater than β (consumer's risk)."
+#, fuzzy
+msgid "1 - α (producer's risk) has to be greater than β (consumer's risk)."
 msgstr "1 - α（生產者風險）必須大於 β（消費者風險）。"
 
 msgid "Current plan <b>CAN %s</b> meet the specified risk point(s)."
@@ -511,12 +926,16 @@ msgstr "實際 P(允收)"
 msgid ""
 "Probability of acceptance (%1$.3f) at AQL (%2$.3f) is <b>lower</b> than the "
 "required probability of acceptance (%3$.3f) at AQL."
-msgstr "在 AQL（%2$.3f）下的允收機率（%1$.3f）<b>低於</b>在 AQL 下的要求允收機率（%3$.3f）。"
+msgstr ""
+"在 AQL（%2$.3f）下的允收機率（%1$.3f）<b>低於</b>在 AQL 下的要求允收機率"
+"（%3$.3f）。"
 
 msgid ""
 "Probability of acceptance (%1$.3f) at RQL (%2$.3f) is <b>higher</b> than the "
 "required probability of acceptance (%3$.3f) at RQL."
-msgstr "在 RQL（%2$.3f）下的允收機率（%1$.3f）<b>高於</b>在 RQL 下的要求允收機率（%3$.3f）。"
+msgstr ""
+"在 RQL（%2$.3f）下的允收機率（%1$.3f）<b>高於</b>在 RQL 下的要求允收機率"
+"（%3$.3f）。"
 
 msgid "Acceptance Probabilities"
 msgstr "允收機率"
@@ -545,7 +964,8 @@ msgstr "（進廠）不良品比例"
 msgid "Average Outgoing Quality"
 msgstr "平均出廠品質"
 
-msgid "AOQL: %.3f"
+#, fuzzy
+msgid "AOQL: %.3g"
 msgstr "AOQL：%.3f"
 
 msgid "ATI (Average Total Inspection) Curve"
@@ -569,7 +989,8 @@ msgstr "平均樣本數"
 msgid "Generated Sampling Plan"
 msgstr "產生的抽樣方案"
 
-msgid "Acceptance probabilities at AQL and RQL"
+#, fuzzy
+msgid "Acceptance Probabilities at AQL and RQL"
 msgstr "在 AQL 與 RQL 的允收機率"
 
 msgid "Acceptance Probability"
@@ -579,6 +1000,11 @@ msgid "Rejection Probability"
 msgstr "拒收機率"
 
 msgid ""
+"The generated sample size (%1$d) exceeds the lot size (%2$d). Review the "
+"plan settings or sampling design."
+msgstr ""
+
+msgid ""
 "If the number of defective items out of %1$d sampled is <= %2$d, accept the "
 "lot. Reject otherwise."
 msgstr "若在 %1$d 個抽樣項目中的缺陷數 <= %2$d，則允收該批；否則拒收。"
@@ -586,11 +1012,23 @@ msgstr "若在 %1$d 個抽樣項目中的缺陷數 <= %2$d，則允收該批；�
 msgid "Create Variable Plan"
 msgstr "建立變數方案"
 
+#, fuzzy
+msgid "historical standard deviation"
+msgstr "歷史標準差"
+
+#, fuzzy
+msgid "sample standard deviation"
+msgstr "樣本標準差"
+
+#, fuzzy
 msgid ""
-"Z.LSL = (mean - LSL) / historical standard deviation\n"
+"Z.LSL = (mean - LSL) / %s\n"
 "\n"
 "Accept lot if Z.LSL >= k, otherwise reject."
-msgstr "Z.LSL = (平均數 - LSL) / 歷史標準差\n\n若 Z.LSL >= k 則允收該批，否則拒收。"
+msgstr ""
+"Z.LSL = (平均數 - LSL) / 歷史標準差\n"
+"\n"
+"若 Z.LSL >= k 則允收該批，否則拒收。"
 
 msgid ""
 "Variable plan generated for the current quality constraints is invalid. "
@@ -643,7 +1081,54 @@ msgstr "無法允收或拒收批次：樣本數必須大於 1。"
 msgid ""
 "Sample size has to be <b>> 1</b> if <b>both</b> LSL and USL are provided, "
 "and historical standard deviation is <b>unknown</b>."
-msgstr "若提供了<b>兩個</b> LSL 與 USL，且歷史標準差<b>未知</b>，則樣本數必須<b>> 1</b>。"
+msgstr ""
+"若提供了<b>兩個</b> LSL 與 USL，且歷史標準差<b>未知</b>，則樣本數必須<b>> 1</"
+"b>。"
 
 msgid "<u>Decision:</u> <b>%s</b> lot."
 msgstr "<u>決策：</u><b>%s</b> 批次。"
+
+#~ msgid "Sample size"
+#~ msgstr "樣本數"
+
+#~ msgid "Time"
+#~ msgstr "時間"
+
+#~ msgid ""
+#~ "Note. Tail correction adds a uniform sudden-jump component over the full "
+#~ "lot-size range (0 to N), so this figure is zoomed to the uncorrected "
+#~ "predictive range to keep the posterior shape readable."
+#~ msgstr ""
+#~ "註。尾部校正在整個批量範圍（0 到 N）上加上了均勻的突跳成分，因此此圖放大到"
+#~ "未校正的預測範圍，以保持後驗形狀可讀。"
+
+#~ msgid "Beta Coefficient"
+#~ msgstr "Beta 係數"
+
+#~ msgid "The prior mode (%1$.4f) must be between 0 and the RQL (%2$.4f)."
+#~ msgstr "先驗眾數（%1$.4f）必須介於 0 與 RQL（%2$.4f）之間。"
+
+#~ msgid ""
+#~ "Could not construct the impartial prior for mode %1$.4f and RQL %2$.4f. "
+#~ "Please choose a lower mode, a lower RQL, or a different prior."
+#~ msgstr ""
+#~ "無法為眾數 %1$.4f 與 RQL %2$.4f 建構無偏先驗。請選擇較低的眾數、較低的 "
+#~ "RQL 或不同的先驗。"
+
+#~ msgid "No valid plans found satisfying the specified constraints."
+#~ msgstr "未找到滿足指定約束條件的有效方案。"
+
+#~ msgid "Strong evidence for accepting the lot."
+#~ msgstr "接受該批的強力證據。"
+
+#~ msgid "Moderate evidence for accepting the lot."
+#~ msgstr "接受該批的中度證據。"
+
+#~ msgid "Inconclusive evidence."
+#~ msgstr "證據不足。"
+
+#~ msgid "Strong evidence for rejecting the lot."
+#~ msgstr "拒絕該批的強力證據。"
+
+#~ msgid "Bayes factor"
+#~ msgstr "貝氏因子"
